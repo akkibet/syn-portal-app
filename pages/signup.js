@@ -99,7 +99,6 @@ export default function Signup() {
 
         if (isUserExisting.data.data.length < 1) {
             const action = await createUser(user);
-            console.log(action);
             if (action.status == 201) {
                 modalResponse = {
                     title: "User Registration",

@@ -54,10 +54,9 @@ export default function Home({ spStudents }) {
         getRole(data.user.email);
         setStudents(spStudents);
         isUserExisting();
-        console.log(data.user.email);
       }
     } catch (error) {
-      console.log(error);
+      // TODO
     }
   }, [status]);
 

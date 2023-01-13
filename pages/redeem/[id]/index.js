@@ -59,7 +59,7 @@ export default function Redeem({ spCourses }) {
                 setIsPageReady(true); // for admin to see the management view
             }
         } catch (error) {
-            console.log(error);
+            // TODO
         }
     }, [status]);
 

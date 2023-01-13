@@ -73,7 +73,7 @@ export default function EditCyber({ course }) {
                 setDate(course[0].labs[router.query.counter].date);
             }
         } catch (error) {
-            console.log(error);
+            // TODO
         }
     }, [status]);
 

@@ -20,7 +20,6 @@ const authOptions = {
                     let hash = isEmailExisting.data.data[0].password;
                     let isPasswordMatch = await bcrypt.compare(password, hash);
 
-                    console.log(isPasswordMatch);
                     if (isPasswordMatch == false) {                                     
                         throw new Error("invalid credentials");
                     }

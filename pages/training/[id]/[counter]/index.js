@@ -43,10 +43,6 @@ export default function EditTraining({ course }) {
         let updateTrainings = [];
         const course = await getCourseById(id);
 
-        console.log(id);
-        console.log(counter);
-        console.log(training);
-
         course.data.data[0].mods.map((item, index) => {
             if (index == counter) {
                 updateTrainings.push(training);   
@@ -74,7 +70,7 @@ export default function EditTraining({ course }) {
                 setPath(course[0].mods[router.query.counter].path);     
             }
         } catch (error) {
-            console.log(error);
+            // TODO
         }
     }, [status]);
 

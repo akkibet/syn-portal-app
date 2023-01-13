@@ -20,8 +20,6 @@ export default async (req, res) => {
         case 'POST':
             try {
                 const redeem = await Redeem.create(req.body);
-                console.log(req.body.isExpired);
-                console.log(req.body.isRedeemed);
 
                 // send the email
                 sendgrid.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
@@ -51,7 +49,7 @@ export default async (req, res) => {
                     `
                     }
                     // Disable muna
-                    await sendgrid.send(msg).catch(error => console.log(error));
+                    await sendgrid.send(msg).catch(error => console.log('Something went wrong'));
                 } else if (req.body.isExpired == true && req.body.isRedeemed == false) {
                     msg = {
                         to: req.body.email,
@@ -75,12 +73,11 @@ export default async (req, res) => {
                         `
                     }
                     // Disable muna
-                    await sendgrid.send(msg).catch(error => console.log(error));
+                    await sendgrid.send(msg).catch(error => console.log('Something went wrong'));
                 }
 
                 res.status(201).json({ success: true, data: redeem })
             } catch (error) {
-                console.log(error);
                 res.status(400).json({ success: false });
             }
             break;

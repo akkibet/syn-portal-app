@@ -39,7 +39,6 @@ export default function RedeemCourse() {
 
     const isUserExisting = async () => {
         const callGetRedeemCode = await getRedeemByUserIdAndCourseId(router.query.id, router.query.redeem);
-        console.log(callGetRedeemCode);
 
         if (callGetRedeemCode.length > 0) setIsCodeRedeemed(callGetRedeemCode[0].isRedeemed);
         return callGetRedeemCode;
@@ -95,7 +94,7 @@ export default function RedeemCourse() {
                 isUserExisting();
             }
         } catch (error) {
-            console.log(error);
+            // TODO
         }
     }, [status]);
 

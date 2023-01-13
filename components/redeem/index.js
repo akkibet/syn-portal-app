@@ -1,5 +1,4 @@
 export default function RedeemComp(props) {
-    console.log(props.spCourses)
     return (
         <div className="mt-5 p-4 w-4/5 mx-auto">
             <div className="flex flex-row items-center">

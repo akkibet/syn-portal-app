@@ -31,7 +31,6 @@ export default function Secret() {
 
     const getRedeems = async () => {
         const action = await getRedeemCodes();
-        console.log(action);
         return action;
     }
 
@@ -43,7 +42,6 @@ export default function Secret() {
                 isEmailExisting();
 
                 const timer = setIntervalAsync(async () => {
-                    console.log("Firing this");
                     const redeems = await getRedeems();
 
                     if (redeems.length > 0) {
@@ -57,8 +55,7 @@ export default function Secret() {
                                         isExpired: true
                                     }
 
-                                    const action = await updateRedeemCodeToExpired(item._id, updateRedeemCode);
-                                    console.log(action);
+                                    await updateRedeemCodeToExpired(item._id, updateRedeemCode);                                    
                                 }
                             }
                         })
@@ -71,7 +68,7 @@ export default function Secret() {
                 return async () => await clearIntervalAsync(timer);
             }
         } catch (error) {
-            console.log(error);
+            // TODO
         }
     }, [status]);
 

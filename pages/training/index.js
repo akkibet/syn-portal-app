@@ -48,7 +48,7 @@ export default function Training({ courses }) {
             isUserExisting();
           }
         } catch (error) {
-          console.log(error);
+          // TODO
         }
       }, [status]);
     

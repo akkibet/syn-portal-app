@@ -35,7 +35,7 @@ export default function CyberCourses({ spCourses }) {
                 getRole(data.user.email);
             }
         } catch (error) {
-            console.log(error);
+            // TODO
         }
     }, [status]);
 

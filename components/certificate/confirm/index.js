@@ -1,7 +1,6 @@
 import moment from "moment";
 
 export default function Confirm(props) {
-    console.log(props.certLink);
     const onSubmitHandler = (e) => {
         e.preventDefault();
 

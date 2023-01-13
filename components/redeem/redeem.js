@@ -1,7 +1,6 @@
 export default function Redeem(props) {
 
-    const onSubmitHandler = (code) => { 
-        console.log("Calling Redeem Now...");       
+    const onSubmitHandler = (code) => {      
         props.verifyRedeemCode(code);
     }
     return (

@@ -27,7 +27,6 @@ export default async (req, res) => {
                 const updatedUser = await User.updateOne({ _id: id }, { $set: req.body });
                 res.status(201).json({ success: true, data: updatedUser })
             } catch (error) {
-                console.log(error);
                 res.status(400).json({ success: false });
             }
             break;

@@ -109,13 +109,10 @@ export default function RedeemCourses({courses, codes}) {
                 isEmailExisting();           
                 // getCoursesWithRedeemedCodes();
                 setId(router.query.id);
-                console.log(role);
-                console.log("Fetching codes from ssr...");
-                console.log(codes);
                 setIsPageReady(true); // for admin to see the management view
             }
         } catch (error) {
-            console.log(error);
+            // TODO
         }
     }, [status, role]);
 

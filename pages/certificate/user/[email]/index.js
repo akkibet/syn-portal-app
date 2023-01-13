@@ -80,8 +80,6 @@ export default function CertificateCourses({ spCourses }) {
             email: user.email,
             cert_title: `${course.data.data[0].title} Certificate`
         }
-
-        console.log(payload);
         
         const action = await requestDigitalCertificate(payload);
         if (action.status == 201) {
@@ -115,10 +113,9 @@ export default function CertificateCourses({ spCourses }) {
                 getRole(data.user.email);
                 getAllCertificates();
                 // getCertUsingCourseId(data.user.email);
-                console.log(spCourses);
             }
         } catch (error) {
-            console.log(error);
+            // TODO
         }
     }, [status]);
 

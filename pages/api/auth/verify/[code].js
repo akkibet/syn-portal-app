@@ -14,8 +14,7 @@ export default async (req, res) => {
                 const data = await Code.find({ code });
 
                 res.status(200).json({ success: true, content: data })
-            } catch (error) {
-                console.log(error);
+            } catch (error) {                
                 res.status(400).json({ success: false, error: error });
             }
             break;
@@ -47,11 +46,10 @@ export default async (req, res) => {
                 }
 
                 // Disable muna
-                await sendgrid.send(msg).catch(error => console.log(error));
+                await sendgrid.send(msg).catch(error => console.log('Something went wrong'));
 
                 res.status(201).json({ success: true, code })
             } catch (error) {
-                console.log(error);
                 res.status(400).json({ success: false });
             }
             break;
@@ -65,7 +63,6 @@ export default async (req, res) => {
                 const updatedCode = await Code.updateOne({ _id: id }, { $set: req.body });
                 res.status(201).json({ success: true, data: updatedCode })
             } catch (error) {
-                console.log(error);
                 res.status(400).json({ success: false });
             }
             break;

@@ -13,8 +13,7 @@ export default async (req, res) => {
                 const users = await User.find({ role });
 
                 res.status(200).json({ success: true, data: users })
-            } catch (error) {                
-                console.log(error);
+            } catch (error) {
                 res.status(404).json({ success: false });
             }
             break;        

@@ -50,12 +50,10 @@ export default function Training({ courses }) {
       if (status === "unauthenticated") router.replace("/");
       if (status === "authenticated") {
         getRole(data.user.email);
-        isUserExisting();
-        console.log("Fetching thru training...")
-        console.log(courses);
+        isUserExisting();        
       }
     } catch (error) {
-      console.log(error);
+      // TODO
     }
   }, [status]);
 
