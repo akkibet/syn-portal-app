@@ -28,7 +28,7 @@ export default function Login(props) {
         <div>
             <div className="flex lg:flex-row flex-col">
                 <div className="flex-none lg:w-2/3 w-full">
-                    <div className="flex justify-center items-center bg-[url('/image1.jpg')] bg-cover lg:h-screen md:py-5">
+                    <div className="flex justify-center items-center bg-[url('/image1.jpeg')] bg-cover lg:h-screen md:py-5">
                         <div className="w-2/3 bg-cyan-500 opacity-80 rounded-2xl p-5 text-white">
                             <strong className="text-2xl">Access all your <strong>SYNCX</strong> accounts</strong>
                             <p className="mt-2">Welcome to <strong>SynTechNX</strong> learning management platform (SYCNX) where you can

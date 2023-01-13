@@ -26,7 +26,7 @@ export default function Register(props) {
         <div>
             <div className="flex h-screen">
                 <div className="flex-none w-2/3">
-                    <div className="flex justify-center items-center bg-[url('/image1.jpg')] bg-cover h-full">
+                    <div className="flex justify-center items-center bg-[url('/image1.jpeg')] bg-cover h-full">
 
                     </div>
                 </div>
