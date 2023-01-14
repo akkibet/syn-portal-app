@@ -15,7 +15,16 @@ export default async (req, res) => {
             } catch (error) {
                 res.status(400).json({ success: false });
             }
-            break;                
+            break;
+        case 'POST':
+            try {
+                const course = await Course.create(req.body);
+
+                res.status(200).json({ success: true, data: course })
+            } catch (error) {
+                res.status(400).json({ success: false });
+            }
+            break;
         default:
             res.status(400).json({ success: false });
             break;

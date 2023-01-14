@@ -108,6 +108,12 @@ export const getCourseById = async (id) => {
     return action;
 }
 
+export const createCourse = async (course) => {
+    // console.log(course);
+    const action = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URI}/api/course`, course);
+    return action;
+}
+
 export const getCertificates = async () => {
     const action = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URI}/api/certificate`);
     return action.data.data;
