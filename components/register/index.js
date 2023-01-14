@@ -24,13 +24,13 @@ export default function Register(props) {
 
     return (
         <div>
-            <div className="flex h-screen">
-                <div className="flex-none w-2/3">
+            <div className="flex lg:h-screen h-full">
+                <div className="flex-none lg:w-2/3 w-full lg:block hidden">
                     <div className="flex justify-center items-center bg-[url('/image1.jpeg')] bg-cover h-full">
 
                     </div>
                 </div>
-                <div className="flex-none w-1/3 flex flex-col items-center justify-center py-5">
+                <div className="flex-none lg:w-1/3 w-full h-full lg:py-0 py-5 flex flex-col items-center justify-center">
                     <div>
                         <Image src="/synx-system-logo.png" width={200} height={100} />
                     </div>
