@@ -1,10 +1,10 @@
 export default function CoursesComp(props) {
   return (
-    <div className="overflow-y-auto">
-      <div className="mt-5 p-4 w-4/5 mx-auto">
+    <div className="overflow-y-auto lg:w-full w-11/12 mx-auto">
+      <div className="mt-5 lg:p-4 lg:w-full w-4/5">
         <div className="flex flex-row items-center">
           <div className="flex-1">
-            <table className="w-full text-center">
+            <table className="lg:w-full text-center">
               <thead>
                 <tr>
                   <th className="border py-2 text-xl">Course</th>
