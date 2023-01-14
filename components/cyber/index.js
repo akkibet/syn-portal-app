@@ -12,7 +12,8 @@ export default function CyberComp(props) {
                     </div>
                 </div>
             </div>
-            <div className="flex w-3/4 mx-auto mt-5 pt-4">
+            <div className="flex lg:w-3/4 w-full mx-auto mt-5 pt-4">
+                <div className="overflow-y-auto lg:w-full w-3/4 mx-auto">
                 <table className="w-full text-center">
                     <thead>
                         <tr>
@@ -45,7 +46,9 @@ export default function CyberComp(props) {
                                 }) : ""
                         }
                     </tbody>
-                </table>                
+                </table>     
+                </div>
+                           
             </div>            
         </div>
 

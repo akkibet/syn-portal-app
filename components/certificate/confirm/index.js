@@ -16,7 +16,7 @@ export default function Confirm(props) {
     }
     return (
         <div className="mt-5 p-4 w-4/5 mx-auto bg-gray-200 border-2 border-gray-500 rounded-lg">
-            <div className="flex">
+            <div className="flex lg:flex-row flex-col">
                 <div className="flex-1">
                     <div className="flex flex-col">
                         <div className="flex-1 mb-5">
@@ -61,7 +61,7 @@ export default function Confirm(props) {
                         </div>                        
                     </div>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 lg:mt-0 mt-5">
                     <div className="flex flex-col">
                         <div className="flex-none w-full">
                             <button

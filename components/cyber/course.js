@@ -1,6 +1,7 @@
 export default function CourseComp(props) {
     return (
-        <div className="mt-5 p-4 w-4/5 mx-auto">
+        <div className="overflow-y-auto lg:w-full w-11/12 lg:mx-auto">
+            <div className="mt-5 p-4 w-4/5 mx-auto">
             <div className="flex flex-row items-center">
                 <div className="flex-1">
                     <table className="w-full text-center">
@@ -30,5 +31,7 @@ export default function CourseComp(props) {
                 </div>
             </div>
         </div>
+        </div>
+        
     )
 }
