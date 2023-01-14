@@ -12,7 +12,7 @@ export default async (req, res) => {
                 const id = req.query.id;
                 const course = await Course.find({ _id: id });
 
-                res.status(200).json({ success: true, data: course })
+                res.status(200).json({ success: true, data: course });
             } catch (error) {
                 res.status(400).json({ success: false });
             }

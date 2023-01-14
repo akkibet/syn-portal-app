@@ -27,7 +27,7 @@ export default function Login(props) {
     return (
         <div>
             <div className="flex lg:flex-row flex-col">
-                <div className="flex-none lg:w-2/3 w-full">
+                <div className="flex-none lg:w-2/3 w-full lg:block hidden">
                     <div className="flex justify-center items-center bg-[url('/image1.jpeg')] bg-cover lg:h-screen md:py-5">
                         <div className="w-2/3 bg-cyan-500 opacity-80 rounded-2xl p-5 text-white">
                             <strong className="text-2xl">Access all your <strong>SYNCX</strong> accounts</strong>
@@ -44,7 +44,7 @@ export default function Login(props) {
                         </div>
                     </div>
                 </div>
-                <div className="flex-none lg:w-1/3 w-full flex flex-col items-center justify-center md:mt-5">
+                <div className="flex-none lg:w-1/3 w-full h-screen flex flex-col items-center justify-center">
                     <div>
                         <Image src="/synx-system-logo.png" width={200} height={100} />
                     </div>
